@@ -1,0 +1,34 @@
+html {
+	background: #fff;
+}
+#wpcontent, #wpfooter {
+	margin-left: 0;
+	background: #fff;
+}
+#adminmenuback,
+#adminmenuwrap {
+	display: none;
+}
+.toplevel_page_settings #wpfooter,
+.dokumentation_page_user_docs #wpfooter,
+.dokumentation_page_designer_docs #wpfooter,
+.dokumentation_page_dev_docs #wpfooter {
+	display: block;
+	position: relative;
+}
+
+a,
+a:link, a:focus, a:hover, a:active,
+a:link:after, a:visited:after {
+	content: " (" attr(href) ") ";
+	text-decoration: none;
+  	color: #66cc00;
+}
+.do-not-print {
+	display: none;
+}
+
+.docs-wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
