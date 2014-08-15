@@ -33,23 +33,18 @@ class project_docs {
 	const version = '1.0.0';
 	const textdomain = 'project-docs';
 
-	protected $loaded_textdomain = false;
-
 	public function __construct() {
 
 		if ( is_admin() ) :
-			// $this->load_plugin_textdomain();
+			add_action( 'plugins_loaded', array( $this, 'docs_load_textdomain' ) );
 			add_action( 'admin_enqueue_scripts', array ( $this, 'docs_styles' ) );
 			add_action( 'admin_enqueue_scripts', array ( $this, 'docs_scripts' ) );
 			add_action( 'admin_menu', array( $this, 'docs_menu' ) );
 		endif;
 	}
 
-	protected function load_plugin_textdomain() {
-		if ( !$this->loaded_textdomain ) {
-			load_plugin_textdomain( self::textdomain, false, self::textdomain . '/languages' );
-			$this->loaded_textdomain = true;
-		}
+	public function docs_load_textdomain() {
+		load_plugin_textdomain( 'project-docs', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	public function docs_styles() {
@@ -86,7 +81,7 @@ class project_docs {
 		echo '<div class="wrap docs-wrapper">';
 
 		// docs content
-		echo apply_filters( 'docs_content', __('Please check out the <a href="#">docs</a> and add your documentation within your plugin or theme.', self::textdomain) );
+		echo apply_filters( 'docs_content', __('Please check out the <a href="https://github.com/hofmannsven/project-docs/wiki" target="_blank">wiki</a> on how to add the documentation within your plugin or theme.', self::textdomain) );
 
 		// docs navigation
 		$docs_nav = apply_filters( 'docs_nav', array() );

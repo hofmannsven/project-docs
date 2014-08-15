@@ -1,0 +1,10 @@
+/* TEAM */
+  Developer: Sven Hofmann
+  Website: hofmannsven.com
+  Twitter: @hofmannsven
+  From: Munich, Germany
+
+/* PLUGIN */
+  Language: English
+  Platform: WordPress
+  GitHub Download: https://github.com/hofmannsven/project-docs
