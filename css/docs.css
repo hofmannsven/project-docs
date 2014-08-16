@@ -20,6 +20,8 @@
 }
 .border img {
 	width: auto;
+	margin: 0 auto;
+	display: block;
 }
 .navigation {
 	position: fixed;
@@ -34,7 +36,7 @@
 .toplevel_page_settings a {
 	text-decoration: none;
 }
-.navigation h2 {
+.docs-wrapper .navigation h2 {
 	font-size: 15px !important;
 	padding: 0 0 5px 0;
 }
@@ -68,6 +70,18 @@
 .quicktipp .quicktipp-code:after {
 	clear: both;
 }
+.infobox.quicktipp {
+	padding: 5px 20px;
+	margin: 10px 0 20px 0;
+	float: left;
+	width: 90%;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.docs-wrapper .infobox.quicktipp h2 {
+	padding-top: 5px;
+}
 .info {
 	background-color: #fff;
 	border-left: 4px solid #7ad03a;
@@ -83,6 +97,7 @@
 .docs-wrapper h2 {
 	font-size: 19px;
 	line-height: 20px;
+	padding-top: 25px;
 }
 .docs-wrapper h3 {
 	font-size: 15px;
