@@ -5,6 +5,6 @@
   From: Munich, Germany
 
 /* PLUGIN */
-  Language: English
+  Language: English, German
   Platform: WordPress
   GitHub Download: https://github.com/hofmannsven/project-docs

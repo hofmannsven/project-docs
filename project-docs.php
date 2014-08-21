@@ -12,7 +12,7 @@
  * Plugin Name:       Project Docs
  * Plugin URI:        https://github.com/hofmannsven/project-docs
  * Description:       Skeleton for documentation inside of WordPress.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            <a href="http://hofmannsven.com" target="_blank">Sven Hofmann</a>
  * Author URI:        http://hofmannsven.com
  * Text Domain:       project-docs
@@ -25,13 +25,14 @@
 if ( !defined( 'WPINC' ) )
 	die;
 
-new project_docs;
+new ProjectDocs;
 
-class project_docs {
+class ProjectDocs {
 
 	const name = 'Docs';
-	const version = '1.0.0';
+	const version = '1.0.1';
 	const textdomain = 'project-docs';
+    const minify = true;
 
 	public function __construct() {
 
@@ -43,33 +44,48 @@ class project_docs {
 		endif;
 	}
 
+    public function minify() {
+        if ( self::minify ) :
+            return '.min';
+        else:
+            return '';
+        endif;
+    }
+
 	public function docs_load_textdomain() {
 		load_plugin_textdomain( 'project-docs', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	public function docs_styles() {
-		wp_register_style( 'docs_styles', plugin_dir_url(__FILE__) . '/css/docs.css', array(), self::version, 'all' );
+		wp_register_style( 'docs_styles', plugin_dir_url(__FILE__) . '/css/docs' . $this->minify() . '.css', array(), self::version, 'all' );
 		wp_enqueue_style( 'docs_styles' );
 
-		wp_register_style( 'docs_print_styles', plugin_dir_url(__FILE__) . '/css/print.css', array(), self::version, 'print' );
+		wp_register_style( 'docs_print_styles', plugin_dir_url(__FILE__) . '/css/print' . $this->minify() . '.css', array(), self::version, 'print' );
 		wp_enqueue_style( 'docs_print_styles' );
 	}
 
 	public function docs_scripts() {
-		wp_register_script( 'docs_scripts', plugin_dir_url(__FILE__) . '/js/docs.js', array( 'jquery' ), self::version, false );
+		wp_register_script( 'docs_scripts', plugin_dir_url(__FILE__) . '/js/docs' . $this->minify() . '.js', array( 'jquery' ), self::version, false );
 		wp_enqueue_script( 'docs_scripts' );
 	}
 
 	public function docs_menu() {
-	    add_menu_page(
-		    self::name,
-		    self::name,
-		    'manage_options',
+        $manage_page_title = apply_filters( 'docs_page_title', self::name);
+        $manage_menu_title = apply_filters( 'docs_menu_title', self::name);
+        $manage_menu_cap = apply_filters( 'docs_menu_capability', 'manage_options' );
+        $manage_menu_icon = apply_filters( 'docs_menu_icon', 'dashicons-info' );
+        $manage_menu_position = apply_filters( 'docs_menu_position', 3 );
+
+        add_menu_page(
+            $manage_page_title,
+            $manage_menu_title,
+            $manage_menu_cap,
 		    'docs',
 		    array ( $this, 'docs_page' ),
-		    'dashicons-info',
-		    3
+            $manage_menu_icon,
+            $manage_menu_position
 	    );
+
 	}
 
 	public function docs_page() {
