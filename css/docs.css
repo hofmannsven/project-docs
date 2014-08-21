@@ -98,6 +98,7 @@
 	font-size: 19px;
 	line-height: 20px;
 	padding-top: 25px;
+    clear: both;
 }
 .docs-wrapper h3 {
 	font-size: 15px;
