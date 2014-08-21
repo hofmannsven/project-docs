@@ -57,7 +57,7 @@
 }
 .quicktipp .quicktipp-desc,
 .quicktipp .quicktipp-code {
-	padding: 0 0 5px 0;
+	padding: 5px 0;
 	margin: 0;
 }
 .quicktipp .quicktipp-desc {
@@ -86,7 +86,7 @@
 	background-color: #fff;
 	border-left: 4px solid #7ad03a;
 	padding: 10px;
-	width: 70%;
+	width: 90%;
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }

@@ -13,6 +13,10 @@ html {
 	display: block;
 	position: relative;
 }
+.infobox.quicktipp,
+.info {
+    box-shadow: none;
+}
 a,
 a:link, a:focus, a:hover, a:active,
 a:link:after, a:visited:after {
