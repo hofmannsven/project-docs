@@ -31,4 +31,4 @@ Further information can be found in the [wiki](https://github.com/hofmannsven/pr
 
 ### Support
 
-If you find an bug, [please raise an issue](https://github.com/hofmannsven/project-docs/issues/new) on GitHub.
+If you find a bug, [please raise an issue](https://github.com/hofmannsven/project-docs/issues/new) on GitHub.
