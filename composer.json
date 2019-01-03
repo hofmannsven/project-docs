@@ -1,0 +1,27 @@
+{
+  "name": "hofmannsven/project-docs",
+  "description": "Skeleton for documentation inside of WordPress.",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "documentation"
+  ],
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Sven Hofmann",
+      "email": "info@hofmannsven.com",
+      "homepage": "https://hofmannsven.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/hofmannsven/project-docs/issues",
+    "wiki": "https://github.com/hofmannsven/project-docs/wiki",
+    "source": "https://github.com/hofmannsven/project-docs"
+  },
+  "require": {
+    "php": ">=5.6"
+  }
+}

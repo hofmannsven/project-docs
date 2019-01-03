@@ -6,20 +6,18 @@
  * @author    Sven Hofmann <info@hofmannsven.com>
  * @license   GPL-3.0+
  * @link      https://github.com/hofmannsven/project-docs
- * @copyright 2014 Sven Hofmann
  *
  * @wordpress-plugin
  * Plugin Name:       Project Docs
  * Plugin URI:        https://github.com/hofmannsven/project-docs
  * Description:       Skeleton for documentation inside of WordPress.
- * Version:           1.0.1
- * Author:            <a href="http://hofmannsven.com" target="_blank">Sven Hofmann</a>
- * Author URI:        http://hofmannsven.com
+ * Version:           1.0.2
+ * Author:            Sven Hofmann
+ * Author URI:        https://hofmannsven.com
  * Text Domain:       project-docs
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/hofmannsven/project-docs
  */
 
 if ( !defined( 'WPINC' ) )
@@ -30,7 +28,7 @@ new ProjectDocs;
 class ProjectDocs {
 
 	const name = 'Docs';
-	const version = '1.0.1';
+	const version = '1.0.2';
 	const textdomain = 'project-docs';
     const minify = true;
 

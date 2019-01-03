@@ -2,9 +2,9 @@
   Developer: Sven Hofmann
   Website: hofmannsven.com
   Twitter: @hofmannsven
-  From: Munich, Germany
+  From: Berlin, Germany
 
 /* PLUGIN */
   Language: English, German
   Platform: WordPress
-  GitHub Download: https://github.com/hofmannsven/project-docs
+  Repository: https://github.com/hofmannsven/project-docs
